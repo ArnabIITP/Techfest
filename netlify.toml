@@ -1,0 +1,11 @@
+# Netlify configuration file
+
+# Set build directory (not needed for static HTML/CSS site)
+[build]
+  publish = "/"
+
+# Handle redirects
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
