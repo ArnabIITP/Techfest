@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         stagger: 0.15,
         ease: 'power2.out'
     }, '-=0.3')
-    .from('.device-mockup', {
+    .from('.device-image', {
         scale: 0.8,
         opacity: 0,
         duration: 1,

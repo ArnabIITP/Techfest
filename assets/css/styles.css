@@ -163,42 +163,42 @@ main {
 
 .image-container {
     width: 100%;
-    height: 400px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.device-mockup {
-    width: 300px;
-    height: 400px;
+.device-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease;
+}
+
+.device-image:hover {
+    transform: scale(1.02);
+}
+
+/* Fallback styling when image doesn't load */
+.image-fallback {
+    width: 400px;
+    height: 300px;
     background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
     border-radius: 20px;
-    margin: 0 auto;
     position: relative;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.device-mockup::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 5px;
-}
-
-.device-mockup::after {
-    content: '';
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 4px solid rgba(255, 255, 255, 0.8);
+.image-fallback::before {
+    content: 'NeuroPet AI Device';
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 /* Features Section */
